@@ -1,0 +1,12 @@
+<h1><%= pelicula.title %></h1>
+<ul>
+    <li>Rating: <%= pelicula.rating %></li>
+    <li>Duración: <%= pelicula.length %></li>
+    <li>Género: <%= pelicula.genre.name %></li>
+    <form action="/movies/editar/<%=pelicula.id%>" method="get">
+        <button type="submit">Editar</button>
+    </form>
+    <form action="/movies/delete/<%=pelicula.id%>?_method=delete" method="POST">
+        <button type="submit">Borrar</button>
+    </form>
+</ul>
